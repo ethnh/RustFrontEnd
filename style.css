@@ -1,0 +1,23 @@
+body {
+    background-color: lightpink;
+}
+div {
+    margin-top: 10%;
+    text-align: center;
+    color: white;
+}
+
+p {
+    font-size: 10em;
+}
+
+button {
+    width:50%;
+    height:75%;
+    font-size:5em;
+    font-family:Cubano;
+    color:white;
+    text-align:center;
+    background-color:#555555;
+    border-width:8px;
+}
