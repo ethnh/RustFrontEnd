@@ -1,9 +1,19 @@
 [package]
-name = "RustFrontEnd"
+name = "rust_frontend"
 version = "0.1.0"
+authors = ["Ethan Hindmarsh <ethan@ethan.lol>"]
 edition = "2021"
+
+[profile.release]
+lto = true
+opt-level = 3
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 yew = "^0.19"
+gloo = "^0.6"
+log = { version = "^0.4.6", features = [ "release_max_level_warn" ] }
+wasm-logger = "^0.2.0"
+getrandom = { version = "^0.2", features = ["js"] }
+rand = "^0.8"

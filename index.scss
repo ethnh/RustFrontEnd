@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    //border: 0;
+    outline: 0;
+    font-size: 100%;
+    background: transparent;
+}
+
+.lower {
+    position: absolute;
+    z-index: 0;
+}
+
+.higher {
+    position: relative;
+    z-index: 1;
+}
+
+body {
+    background-color: #ffaaf5;
+    background-image: repeating-linear-gradient(
+                    -45deg,
+                    transparent,
+                    transparent 25px,
+                    rgba(255, 255, 255, 0.2) 25px,
+                    rgba(255, 255, 255, 0.2) 50px),
+    repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 25px,
+                    rgba(255, 255, 255, 0.2) 25px,
+                    rgba(255, 255, 255, 0.2) 50px);
+    text-align: center;
+    justify-content: center;
+    color: #333333;
+    font-family: Cubano;
+    height: 100vh;
+    width: 100vw;
+}
+
+div#sbutton {
+    margin-top: 1%;
+}
+
+div#counterheader {
+    position: static;
+    top: 0;
+    left: 50%;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+
+button {
+    width:max(12%,8em);
+    height:max(15%,2.5em);
+    margin: 0.5em;
+    font-size:1em;
+    color:white;
+    text-align:center;
+    background-color:#555555;
+    border-width:8px;
+    font-family: Cubano;
+}
+
+div.icon-snowflake-full.svg {
+    position: relative;
+    display: block;
+    width: 10vw;
+    height: 10vh;
+}
+
+.snowflake {
+    position: relative;
+    top: 5px;
+    width: 50px;
+    animation: snowflakes 25s linear infinite, 25s spinning;
+}
+
+
+@keyframes snowflakes {
+    0% {
+        transform: translate3d(0, -10vh, 0) rotate(0deg) scale(0.6);
+    }
+    100% {
+        transform: translate3d(15px, 110vh, 0px) rotate(360deg) scale(0.6);
+    }
+}
+
+//@keyframes snowflakes {
+//    0% {
+//        transform: translateY(0vh);
+//        opacity: 1;
+//    }
+//
+//    99% {
+//        transform: translateY(110vh);
+//        opacity: 1;
+//    }
+//
+//    100% {
+//        opacity: 0;
+//        display: none;
+//        transform: translateY(110vh);
+//    }
+//}
+
+.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.message-text {
+    margin: auto;
+    position: relative;
+    justify-content: center;
+    justify-self: center;
+    border-radius: 2em;
+    background: linear-gradient(-45deg, rgba(238, 50, 62, 0.5), rgba(231, 60, 126, 0.5), rgba(213, 135, 203, 0.5), rgba(255, 0, 183, 0.5));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+
+    //background-color: rgba(255, 0, 200, 0.5);
+    text-align: center;
+    padding: 2em;
+    width: max(min(50vw, 40em), 18em);
+    height: 65vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.message-text-buttons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.message-text-container {
+    display: block;
+    word-wrap: break-word;
+}
+.message {
+    white-space: pre;
+    color: #000000;
+}
+
+.message-hint {
+    padding: 1em;
+}
+
+.mini {
+    font-size: 0.75em;
+}
+
+div#counterheader {
+    padding-bottom: 2em;
+}
+
+.snowflake-clicked {
+    transform-origin: center center;
+    animation: snowflake-clicked-animation 1s ease-in-out forwards;
+}
+
+@keyframes snowflake-clicked-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(3deg);
+    }
+
+    75% {
+        transform: rotate(-3deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+#counter {
+    font-size: 1.5em;
+}
